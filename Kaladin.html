@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ajax Challenge</title>
+		<link rel="stylesheet" href="kal.css">
+    </head>
+    <body>
+        <div class="main">
+			<div class='kal' id="content">
+                <input align:"center"; type="image" src="./Kaladin.png" alt="Kaladin" height="400" onclick="swap2Text();"/>
+
+			</div>
+            <div class="main" id="brocode">
+                <p>  </p>
+            </div>
+<script type="text/javascript">
+
+            //Challenge - on ready state change pg 287
+            function swap2Text() {
+            var kal = new XMLHttpRequest();
+            kal.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("brocode").innerHTML = this.responseText;
+                }
+            };
+            kal.open("GET","Kaladin.txt",true);
+            kal.send();
+        }
+		</script>
+    </body>
+</html>

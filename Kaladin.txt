@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+		Strength before weakness, life before death, Journey before destination.
+    </body>
+</html>
